@@ -1,0 +1,620 @@
+
+<html>
+        <head>
+            <title>Degenesis Rebirth Charakter Sheet</title>
+            <style type="text/css">
+                @media print
+                {    
+                    .no-print, .no-print *
+                    {
+                        display: none !important;
+                    }
+                    .print-bg
+                    {
+                        background-color:#ffffff !important;
+                        margin-top:-60px;
+                    }
+                }
+                
+                .nomargin {margin:0; padding:0;}
+                .window {
+                    font-family: 'Helvetica', sans-serif;
+                    position: absolute;
+                    top:100px;
+                    right: 10px;
+                    z-index: 20;
+                    padding: 20px;
+                    background: rgba(255, 255, 255, 0.95);
+                    font-size: 12px;
+                    line-height: 1.2;
+                    -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+                    -moz-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+                    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+                    display:none;
+                
+                }
+                
+                .infowindow {
+                    font-family: 'Helvetica', sans-serif;
+                    position: absolute;
+                    margin:20px;
+                    top: 0px;
+                    right: 0px;
+                    z-index: 20;
+                    padding: 20px;
+                    background: rgba(255, 255, 255, 0.95);
+                    font-size: 12px;
+                    line-height: 1.2;
+                    -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+                    -moz-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+                    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+                    display:none;
+                
+                }
+                
+                #concept_tt h2 {
+                    font-weight:300;
+                    text-transform: uppercase;
+                    color:#e71111;
+                }
+                #concept_tt h3 {
+                    margin-bottom:0px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    color:#e71111;
+                }
+                #concept_tt p {
+                    margin-top:5px;
+                }
+                
+                #culture_tt h2 {
+                    font-weight:300;
+                    text-transform: uppercase;
+                    color:#e71111;
+                }
+                #culture_tt h3 {
+                    margin-bottom:0px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    color:#e71111;
+                }
+                #culture_tt p {
+                    margin-top:5px;
+                }
+                #cult_tt h2 {
+                    font-weight:300;
+                    text-transform: uppercase;
+                    color:#e71111;
+                }
+                #cult_tt h3 {
+                    margin-bottom:0px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    color:#e71111;
+                }
+                #cult_tt p {
+                    margin-top:5px;
+                }
+                #info h2 {
+                    font-weight:300;
+                    text-transform: uppercase;
+                    color:#e71111;
+                }
+                #toload h2 {
+                    font-weight:300;
+                    text-transform: uppercase;
+                    color:#e71111;
+                }
+                #header {
+                    display: inline;
+                    background-color:#ffffff;
+                    height:40px;
+                    width:100%;
+                    position: fixed;
+                    margin-top:-60px;
+                    padding:0;
+                    border-bottom: 1px solid #000000;
+                    z-index:20;
+                }
+                
+                #headerinner {
+                    width:960px; 
+                    margin: 0 auto;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    padding:10px;
+                    font-weight:300;
+                }
+                
+                .clearfix:before,
+                .clearfix:after {
+                content: " ";
+                display: table;
+                }
+                
+                .clearfix:after {
+                clear: both;
+                }
+                
+                .clearfix {
+                *zoom: 1;
+                }
+                
+                .numblock {
+                    display: inline;
+                    background-color:#000000;
+                    
+                    padding:4px;
+                
+                    margin-right:10px;
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 10px;
+                    font-weight:600;
+                    text-transform: uppercase;
+                }
+                
+                .button {
+                    display: inline;
+                    background-color:#000000;
+                    height:16px;
+                    padding:4px;
+                
+                    margin-right:8px;
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    float: right;
+                    -o-transition:.2s;
+                    -ms-transition:.2s;
+                    -moz-transition:.2s;
+                    -webkit-transition:.2s;
+                    transition:.2s;
+                }
+                
+                .button:hover {
+                    display: inline;
+                    background-color:#e70000;
+                    height:16px;
+                    padding:4px;
+                    margin-right:8px;
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    float: right;
+                    -o-transition:.2s;
+                    -ms-transition:.2s;
+                    -moz-transition:.2s;
+                    -webkit-transition:.2s;
+                    transition:.2s;
+                }
+                
+                .button2 {
+                    display: inline;
+                    background-color:#000000;
+                    width:240px;
+                    height:16px;
+                    padding:4px;
+                    margin-bottom:8px;
+                
+                    margin-right:8px;
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    float: left;
+                    -o-transition:.2s;
+                    -ms-transition:.2s;
+                    -moz-transition:.2s;
+                    -webkit-transition:.2s;
+                    transition:.2s;
+                }
+                
+                .button2:hover {
+                    display: inline;
+                    background-color:#e70000;
+                    width:240px;
+                    height:16px;
+                    padding:4px;
+                    margin-bottom:8px;
+                    margin-right:8px;
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    float: left;
+                    -o-transition:.2s;
+                    -ms-transition:.2s;
+                    -moz-transition:.2s;
+                    -webkit-transition:.2s;
+                    transition:.2s;
+                }
+                
+                
+                .button3 {
+                    display: inline;
+                    background-color:#dddddd;
+                    width:240px;
+                    height:16px;
+                    padding:4px;
+                    margin-bottom:8px;
+                
+                    margin-right:8px;
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    float: left;
+                    -o-transition:.2s;
+                    -ms-transition:.2s;
+                    -moz-transition:.2s;
+                    -webkit-transition:.2s;
+                    transition:.2s;
+                }
+                
+                .button3:hover {
+                    display: inline;
+                    background-color:#e70000;
+                    width:240px;
+                    height:16px;
+                    padding:4px;
+                    margin-bottom:8px;
+                    margin-right:8px;
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    float: left;
+                    -o-transition:.2s;
+                    -ms-transition:.2s;
+                    -moz-transition:.2s;
+                    -webkit-transition:.2s;
+                    transition:.2s;
+                }
+                
+                .modusbutton {
+                    display: inline;
+                    background-color:#c0c0c0;
+                    height:16px;
+                    padding:4px;
+                    margin-left:-8px;
+                    margin-right:8px;
+                    color:#000000;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    float: left;
+                    -o-transition:.2s;
+                    -ms-transition:.2s;
+                    -moz-transition:.2s;
+                    -webkit-transition:.2s;
+                    transition:.2s;
+                }
+                
+                .modusbutton:hover {
+                    display: inline;
+                    background-color:#606060;
+                    height:16px;
+                    padding:4px;
+                    margin-left:-8px;
+                    margin-right:8px;
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 15px;
+                    font-weight:300;
+                    text-transform: uppercase;
+                    float: left;
+                    -o-transition:.2s;
+                    -ms-transition:.2s;
+                    -moz-transition:.2s;
+                    -webkit-transition:.2s;
+                    transition:.2s;
+                }
+                
+                .left {
+                    float:left;
+                }
+                
+                .input {
+                    display: inline;
+                    background-color:transparent;
+                    height:16px;
+                    
+                    margin-right:8px;
+                    color:#000000;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 11px;
+                    font-weight:300;
+                    border: none;
+                    border-color: transparent;
+                
+                }
+                
+                .txt {
+                    color:#000000;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 11px;
+                    font-weight:300;
+                    height:16px;
+                    text-transform: uppercase;
+                }
+                
+                .txtccc {
+                    color:#000000;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 13px;
+                    font-weight:300;
+                    height:16px;
+                    text-transform: uppercase;
+                    letter-spacing:0.1em;
+                }
+                
+                .txt2 {
+                    color:#000000;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 13px;
+                    font-weight:300;
+                    height:16px;
+                }
+                
+                .txt3 {
+                    color:#000000;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 10px;
+                    font-weight:300;
+                    height:16px;
+                }
+                
+                .txt2white {
+                    color:#ffffff;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 13px;
+                    font-weight:400;
+                    height:16px;
+                }
+                
+                .txtBig {
+                    color:#000000;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 18px;
+                    font-weight:300;
+                    height:16px;
+                    letter-spacing:0.2em;
+                }
+                
+                .txtStretched {
+                    color:#000000;
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 13px;
+                    font-weight:300;
+                    height:16px;
+                    letter-spacing:0.2em;
+                }
+                </style>
+                
+        </head>
+        <body style="background-color:#e1e1e1;" class="print-bg">
+            <div style="width:960px; margin: 0 auto; background-color:#e1e1e1; background-image: url('charakterbogen.png'); background-size: 960px; background-repeat: no-repeat; position:relative; margin-top:60px;">
+            
+            <!-- Header left -->
+            <input type="text" id="t0" maxlength="20" style="position:absolute; top:58px; left: 155px; width: 120px;" value="Nada" class="input"></input>
+            <input type="text" id="t1" maxlength="2" style="position:absolute; top:81px; left: 155px; width: 120px;" value="18" class="input"></input>
+            <input type="text" id="t2" maxlength="20" style="position:absolute; top:104px; left: 155px; width: 120px;" value="-" class="input"></input>
+            <input type="text" id="t3" maxlength="20" style="position:absolutae; top:127px; left: 155px; width: 120px;" value="0" class="input"></input>
+            
+            <!-- Header right -->
+            <input type="text" id="t4" maxlength="10" style="position:absolute; top:58px; left: 790px; width: 100px;" value="m" class="input"></input>
+            <input type="text" id="t5" maxlength="8" style="position:absolute; top:81px; left: 790; width: 100px;" value="177cm" class="input"></input>
+            <input type="text" id="t6" maxlength="10" style="position:absolute; top:104px; left: 790px; width: 100px;" value="70kg" class="input"></input>
+            <input type="text" id="t7" maxlength="12" style="position:absolute; top:127px; left: 790px; width: 100px;" value="0" class="input"></input>
+            
+            <!-- Potentials -->
+            <input type="text" id="t8" maxlength="25" style="position:absolute; top:747px; left: 678px; width: 160px;" value="" class="input"></input>
+            <input type="text" id="t9" maxlength="25" style="position:absolute; top:770px; left: 678px; width: 160px;" value="" class="input"></input>
+            <input type="text" id="t10" maxlength="25" style="position:absolute; top:793px; left: 678px; width: 160px;" value="" class="input"></input>
+            <input type="text" id="t11" maxlength="25" style="position:absolute; top:816px; left: 678px; width: 160px;" value="" class="input"></input>
+            <input type="text" id="t12" maxlength="25" style="position:absolute; top:839px; left: 678px; width: 160px;" value="" class="input"></input>
+            <input type="text" id="t13" maxlength="25" style="position:absolute; top:861px; left: 678px; width: 160px;" value="" class="input"></input>
+            
+            <!-- Weapons -->
+            <!-- Weapon 1 -->
+            <input type="text" id="t14" maxlength="25" style="position:absolute; top:940px; left: 75px; width: 160px;" value="Bezeichnung" class="input"></input>
+            <input type="text" id="t15" maxlength="5" style="position:absolute; top:940px; left: 280px; width: 60px;" value="+0W" class="input"></input>
+            <input type="text" id="t16" maxlength="10" style="position:absolute; top:940px; left: 370px; width: 60px;" value="X/Y" class="input"></input>
+            <input type="text" id="t17" maxlength="5" style="position:absolute; top:940px; left: 470px; width: 50px;" value="X" class="input"></input>
+            <input type="text" id="t18" maxlength="8" style="position:absolute; top:940px; left: 530px; width: 40px;" value="X/Y" class="input"></input>
+            <input type="text" id="t19" maxlength="35" style="position:absolute; top:940px; left: 580px; width: 200px;" value="-" class="input"></input>
+            <input type="text" id="t20" maxlength="2" style="position:absolute; top:940px; left: 790px; width: 15px;" value="0" class="input"></input>
+            <input type="text" id="t21" maxlength="1" style="position:absolute; top:940px; left: 825px; width: 15px;" value="0" class="input"></input>
+            <input type="text" id="t22" maxlength="2" style="position:absolute; top:940px; left: 860px; width: 20px;" value="0" class="input"></input>
+            
+            <!-- Weapon 2 -->
+            <input type="text" id="t23" maxlength="25" style="position:absolute; top:975px; left: 75px; width: 160px;" value="" class="input"></input>
+            <input type="text" id="t24" maxlength="5" style="position:absolute; top:975px; left: 280px; width: 60px;" value="" class="input"></input>
+            <input type="text" id="t25" maxlength="10" style="position:absolute; top:975px; left: 370px; width: 60px;" value="" class="input"></input>
+            <input type="text" id="t26" maxlength="5" style="position:absolute; top:975px; left: 470px; width: 50px;" value="" class="input"></input>
+            <input type="text" id="t27" maxlength="8" style="position:absolute; top:975px; left: 530px; width: 40px;" value="" class="input"></input>
+            <input type="text" id="t28" maxlength="35" style="position:absolute; top:975px; left: 580px; width: 200px;" value="" class="input"></input>
+            <input type="text" id="t29" maxlength="2" style="position:absolute; top:975px; left: 790px; width: 15px;" value="" class="input"></input>
+            <input type="text" id="t30" maxlength="1" style="position:absolute; top:975px; left: 825px; width: 15px;" value="" class="input"></input>
+            <input type="text" id="t31" maxlength="2" style="position:absolute; top:975px; left: 860px; width: 20px;" value="" class="input"></input>
+            
+            <!-- Weapon 3 -->
+            <input type="text" id="t32" maxlength="25" style="position:absolute; top:1010px; left: 75px; width: 160px;" value="" class="input"></input>
+            <input type="text" id="t33" maxlength="5" style="position:absolute; top:1010px; left: 280px; width: 60px;" value="" class="input"></input>
+            <input type="text" id="t34" maxlength="10" style="position:absolute; top:1010px; left: 370px; width: 60px;" value="" class="input"></input>
+            <input type="text" id="t35" maxlength="5" style="position:absolute; top:1010px; left: 470px; width: 50px;" value="" class="input"></input>
+            <input type="text" id="t36" maxlength="8" style="position:absolute; top:1010px; left: 530px; width: 40px;" value="" class="input"></input>
+            <input type="text" id="t37" maxlength="35" style="position:absolute; top:1010px; left: 580px; width: 200px;" value="" class="input"></input>
+            <input type="text" id="t38" maxlength="2" style="position:absolute; top:1010px; left: 790px; width: 15px;" value="" class="input"></input>
+            <input type="text" id="t39" maxlength="1" style="position:absolute; top:1010px; left: 825px; width: 15px;" value="" class="input"></input>
+            <input type="text" id="t40" maxlength="2" style="position:absolute; top:1010px; left: 860px; width: 20px;" value="" class="input"></input>
+            
+            <!-- Armor -->
+            <!-- Armor 1 -->
+            <input type="text" id="t41" maxlength="30" style="position:absolute; top:1088px; left: 75px; width: 250px;" value="Bezeichnung" class="input"></input>
+            <input type="text" id="t42" maxlength="2" style="position:absolute; top:1088px; left: 370px; width: 60px;" value="1" class="input"></input>
+            <input type="text" id="t43" maxlength="40" style="position:absolute; top:1088px; left: 470px; width: 250px;" value="-" class="input"></input>
+            <input type="text" id="t44" maxlength="2" style="position:absolute; top:1088px; left: 790px; width: 15px;" value="0" class="input"></input>
+            <input type="text" id="t45" maxlength="1" style="position:absolute; top:1088px; left: 825px; width: 15px;" value="0" class="input"></input>
+            <input type="text" id="t46" maxlength="2" style="position:absolute; top:1088px; left: 860px; width: 20px;" value="0" class="input"></input>
+            
+            <!-- Armor 2 -->
+            <input type="text" id="t47" maxlength="30" style="position:absolute; top:1122px; left: 75px; width: 250px;" value="" class="input"></input>
+            <input type="text" id="t48" maxlength="2" style="position:absolute; top:1122px; left: 370px; width: 60px;" value="" class="input"></input>
+            <input type="text" id="t49" maxlength="40" style="position:absolute; top:1122px; left: 470px; width: 250px;" value="" class="input"></input>
+            <input type="text" id="t50" maxlength="2" style="position:absolute; top:1122px; left: 790px; width: 15px;" value="" class="input"></input>
+            <input type="text" id="t51" maxlength="1" style="position:absolute; top:1122px; left: 825px; width: 15px;" value="" class="input"></input>
+            <input type="text" id="t52" maxlength="2" style="position:absolute; top:1122px; left: 860px; width: 20px;" value="" class="input"></input>
+            
+            <!-- Equipment -->
+            <!-- left column -->
+            <input type="text" id="t53" maxlength="40" style="position:absolute; top:1202px; left: 75px; width: 250px;" value="" class="input"></input>
+            <input type="text" id="t54" maxlength="2" style="position:absolute; top:1202px; left: 435px; width: 20px;" value="" class="input"></input>
+            
+            <input type="text" id="t55" maxlength="40" style="position:absolute; top:1236px; left: 75px; width: 250px;" value="" class="input"></input>
+            <input type="text" id="t56" maxlength="2" style="position:absolute; top:1236px; left: 435px; width: 20px;" value="" class="input"></input>
+            
+            <input type="text" id="t57" maxlength="40" style="position:absolute; top:1270px; left: 75px; width: 250px;" value="" class="input"></input>
+            <input type="text" id="t58" maxlength="2" style="position:absolute; top:1270px; left: 435px; width: 20px;" value="" class="input"></input>
+            
+            <!-- right column -->
+            <input type="text" id="t59" maxlength="40" style="position:absolute; top:1202px; left: 470px; width: 250px;" value="" class="input"></input>
+            <input type="text" id="t60" maxlength="2" style="position:absolute; top:1202px; left: 770px; width: 20px;" value="" class="input"></input>
+            
+            <input type="text" id="t61" maxlength="40" style="position:absolute; top:1236px; left: 470px; width: 250px;" value="" class="input"></input>
+            <input type="text" id="t62" maxlength="2" style="position:absolute; top:1236px; left: 770px; width: 20px;" value="" class="input"></input>
+            
+            <input type="text" id="t63" maxlength="40" style="position:absolute; top:1270px; left: 470px; width: 250px;" value="" class="input"></input>
+            <input type="text" id="t64" maxlength="2" style="position:absolute; top:1270px; left: 770px; width: 20px;" value="" class="input"></input>
+            
+            <!-- Weight -->
+            <input type="text" id="t65" maxlength="3" style="position:absolute; top:1217px; left: 820px; width: 40px; font-size:18px; height:50px;" value="0" class="input"></input>
+            
+            
+            <!-- Text -->
+            
+            <div style="position:absolute; top:123px; left: 405px;" class="txtStretched">CHARAKTERBOGEN</div>
+            
+            <div style="position:absolute; top:166px; left: 118px;" class="txtBig">KULTUR</div>
+            <div style="position:absolute; top:166px; left: 427px;" class="txtBig">KONZEPT</div>
+            <div style="position:absolute; top:166px; left: 770px;" class="txtBig">KULT</div>
+            
+            <div style="position:absolute; top:59px; left: 75px;" class="txt">NAME:</div>
+            <div style="position:absolute; top:81px; left: 75px;" class="txt">ALTER:</div>
+            <div style="position:absolute; top:104px; left: 75px;" class="txt">RANG:</div>
+            <div style="position:absolute; top:127px; left: 75px;" class="txt">ERFAHRUNG:</div>
+            <div style="position:absolute; top:59px; left: 678px;" class="txt">GESCHLECHT:</div>
+            <div style="position:absolute; top:81px; left: 678px;" class="txt">GRÖSSE:</div>
+            <div style="position:absolute; top:104px; left: 678px;" class="txt">GEWICHT:</div>
+            <div style="position:absolute; top:127px; left: 678px;" class="txt">DINAR / WECHSEL:</div>
+            
+            
+            <div style="position:absolute; top:338px; left: 77px;" class="txt2white">KÖRPER</div>
+            <div style="position:absolute; top:368px; left: 77px;" class="txt2">ATHLETIK</div>
+            <div style="position:absolute; top:391px; left: 77px;" class="txt2">FAUSTKAMPF</div>
+            <div style="position:absolute; top:413px; left: 77px;" class="txt2">KRAFT</div>
+            <div style="position:absolute; top:435px; left: 77px;" class="txt2">NAHKAMPF</div>
+            <div style="position:absolute; top:458px; left: 77px;" class="txt2">AUSDAUER</div>
+            <div style="position:absolute; top:481px; left: 77px;" class="txt2">HÄRTE</div>
+            
+            <div style="position:absolute; top:338px; left: 364px;" class="txt2white">GESCHICKLICHKEIT</div>
+            <div style="position:absolute; top:368px; left: 364px;" class="txt2">HANDWERK</div>
+            <div style="position:absolute; top:391px; left: 364px;" class="txt2">FINGERFERTIGKEIT</div>
+            <div style="position:absolute; top:413px; left: 364px;" class="txt2">STEUERN</div>
+            <div style="position:absolute; top:435px; left: 364px;" class="txt2">BEWEGLICHKEIT</div>
+            <div style="position:absolute; top:458px; left: 364px;" class="txt2">SCHUSSWAFFEN</div>
+            <div style="position:absolute; top:481px; left: 364px;" class="txt2">HEIMLICHKEIT</div>
+            
+            <div style="position:absolute; top:338px; left: 678px;" class="txt2white">CHARISMA</div>
+            <div style="position:absolute; top:368px; left: 678px;" class="txt2">KÜNSTE</div>
+            <div style="position:absolute; top:391px; left: 678px;" class="txt2">VERHALTEN</div>
+            <div style="position:absolute; top:413px; left: 678px;" class="txt2">AUSDRUCK</div>
+            <div style="position:absolute; top:435px; left: 678px;" class="txt2">FÜHRUNG</div>
+            <div style="position:absolute; top:458px; left: 678px;" class="txt2">VERHANDLUNG</div>
+            <div style="position:absolute; top:481px; left: 678px;" class="txt2">VERFÜHRUNG</div>
+            
+            
+            
+            <div style="position:absolute; top:519px; left: 77px;" class="txt2white">VERSTAND</div>
+            <div style="position:absolute; top:550px; left: 77px;" class="txt2">ARTEFAKTKUNDE</div>
+            <div style="position:absolute; top:572px; left: 77px;" class="txt2">TECHNIK</div>
+            <div style="position:absolute; top:594px; left: 77px;" id="fp1" class="txt2">FOKUS</div>
+            <div style="position:absolute; top:617px; left: 77px;" class="txt2">LEGENDEN</div>
+            <div style="position:absolute; top:640px; left: 77px;" class="txt2">MEDIZIN</div>
+            <div style="position:absolute; top:662px; left: 77px;" class="txt2">WISSENSCHAFT</div>
+            
+            <div style="position:absolute; top:519px; left: 364px;" class="txt2white">PSYCHE</div>
+            <div style="position:absolute; top:550px; left: 364px;" class="txt2">GERISSENHEIT</div>
+            <div style="position:absolute; top:572px; left: 364px;" class="txt2">TÄUSCHUNG</div>
+            <div style="position:absolute; top:594px; left: 364px;" class="txt2">DOMINIEREN</div>
+            <div style="position:absolute; top:617px; left: 364px;" id="gw1" class="txt2">GLAUBE</div>
+            <div style="position:absolute; top:640px; left: 364px;" class="txt2">REAKTION</div>
+            <div style="position:absolute; top:662px; left: 364px;" id="gw2" class="txt2">WILLE</div>
+            
+            <div style="position:absolute; top:519px; left: 678px;" class="txt2white">INSTINKT</div>
+            <div style="position:absolute; top:550px; left: 678px;" class="txt2">EMPATHIE</div>
+            <div style="position:absolute; top:572px; left: 678px;" class="txt2">ORIENTIERUNG</div>
+            <div style="position:absolute; top:594px; left: 678px;" class="txt2">WAHRNEHMUNG</div>
+            <div style="position:absolute; top:617px; left: 678px;" id="fp2" class="txt2">PRIMAL</div>
+            <div style="position:absolute; top:640px; left: 678px;" class="txt2">ÜBERLEBEN</div>
+            <div style="position:absolute; top:662px; left: 678px;" class="txt2">ZÄHMEN</div>
+            
+            
+            <div style="position:absolute; top:718px; left: 77px;" class="txt2white">HINTERGRÜNDE</div>
+            <div style="position:absolute; top:718px; left: 678px;" class="txt2white">POTENZIALE</div>
+            
+            <div style="position:absolute; top:748px; left: 77px;" class="txt2">VERBÜNDETE</div>
+            <div style="position:absolute; top:770px; left: 77px;" class="txt2">AUTORITÄT</div>
+            <div style="position:absolute; top:792px; left: 77px;" class="txt2">NETZWERK</div>
+            <div style="position:absolute; top:815px; left: 77px;" class="txt2">RUF</div>
+            <div style="position:absolute; top:838px; left: 77px;" class="txt2">RESSOURCEN</div>
+            <div style="position:absolute; top:860px; left: 77px;" class="txt2">GEHEIMNISSE</div>
+            
+            <div style="position:absolute; top:736px; left: 465px;" class="txt2">EGO</div>
+            <div style="position:absolute; top:789px; left: 436px;" class="txt2">VERSPORUNG</div>
+            <div style="position:absolute; top:833px; left: 425px;" class="txt2">FLEISCHWUNDEN</div>
+            <div style="position:absolute; top:878px; left: 452px;" class="txt2">TRAUMA</div>
+            
+            
+            <div style="position:absolute; top:911px; left: 74px;" class="txt3">WAFFEN</div>
+            <div style="position:absolute; top:911px; left: 260px;" class="txt3">HANDHABUNG</div>
+            <div style="position:absolute; top:911px; left: 353px;" class="txt3">DISTANZ ( - / -4W )</div>
+            <div style="position:absolute; top:911px; left: 464px;" class="txt3">SCHADEN</div>
+            <div style="position:absolute; top:911px; left: 527px;" class="txt3">MAGAZIN</div>
+            <div style="position:absolute; top:911px; left: 640px;" class="txt3">EIGENSCHAFTEN</div>
+            <div style="position:absolute; top:911px; left: 785px;" class="txt3">LAST</div>
+            <div style="position:absolute; top:911px; left: 817px;" class="txt3">TECH</div>
+            <div style="position:absolute; top:911px; left: 850px;" class="txt3">SLOTS</div>
+            
+            <div style="position:absolute; top:1060px; left: 74px;" class="txt3">RÜSTUNG</div>
+            <div style="position:absolute; top:1060px; left: 365px;" class="txt3">PANZERWERT</div>
+            <div style="position:absolute; top:1060px; left: 585px;" class="txt3">EIGENSCHAFTEN</div>
+            <div style="position:absolute; top:1060px; left: 785px;" class="txt3">LAST</div>
+            <div style="position:absolute; top:1060px; left: 817px;" class="txt3">TECH</div>
+            <div style="position:absolute; top:1060px; left: 850px;" class="txt3">SLOTS</div>
+            
+            <div style="position:absolute; top:1172px; left: 74px;" class="txt3">AUSRÜSTUNG</div>
+            <div style="position:absolute; top:1172px; left: 432px;" class="txt3">LAST</div>
+            <div style="position:absolute; top:1172px; left: 768px;" class="txt3">LAST</div>
+            <div style="position:absolute; top:1172px; left: 810px;" class="txt3">GESAMTLAST</div>
+            
+            
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </div>
+    </html>
